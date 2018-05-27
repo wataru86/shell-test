@@ -16,7 +16,7 @@ fi
 # package.yaml を更新する
 
 hash=(`md5sum package.yaml`)
-yq -y ".version |= $1" package.yaml > $hash
+yq -y ".version |= \"$1\"" package.yaml > $hash
 mv $hash package.yaml
 
 git add package.yaml
