@@ -7,7 +7,8 @@ if [ $# -ne 1 ]; then
 fi
 
 # developなう?
-if [ $(git symbolic-ref --short HEAD) != "develop"]; then
+branch=$(git symbolic-ref --short HEAD)
+if [ $branch != "develop" ]; then
   echo "developブランチで実行してください"
   exit 1
 fi
