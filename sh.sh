@@ -23,7 +23,7 @@ git add package.yaml
 git commit -m "Release Version $1"
 
 git co master
-git merge -e develop
+git merge --no-edit develop
 
-git co develop
-git rebase master
+#git co develop
+#git rebase master
