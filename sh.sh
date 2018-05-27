@@ -25,4 +25,4 @@ git commit -m "Release Version $1"
 git co master
 git merge develop -e
 
-git 
+git cherry-pick master HEAD
