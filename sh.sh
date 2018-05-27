@@ -23,6 +23,7 @@ git add package.yaml
 git commit -m "Release Version $1"
 
 git co master
-git merge develop -e
+git merge -e develop
 
+git co develop
 git cherry-pick master HEAD
