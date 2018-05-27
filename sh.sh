@@ -26,4 +26,4 @@ git co master
 git merge -e develop
 
 git co develop
-git cherry-pick master HEAD
+git rebase master
