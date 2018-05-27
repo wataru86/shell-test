@@ -21,3 +21,8 @@ mv $hash package.yaml
 
 git add package.yaml
 git commit -m "Release Version $1"
+
+git co master
+git merge develop -e
+
+git 
