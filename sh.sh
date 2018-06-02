@@ -22,12 +22,11 @@ mv $hash package.yaml
 git add package.yaml
 git commit -m "Release Version $1"
 
-git tag $1
-
 git checkout master
 git merge --no-ff --no-edit develop
+git tag $1
 git push origin master
 
 git checkout develop
 git rebase master
-git push origin master
+git push origin develop
