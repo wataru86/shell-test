@@ -19,12 +19,13 @@ hash=(`md5sum package.yaml`)
 yq -y ".version |= \"$1\"" package.yaml > $hash
 mv $hash package.yaml
 
+git tag v$1
+
 git add package.yaml
 git commit -m "Release Version $1"
 
 git checkout master
 git merge --no-ff --no-edit develop
-git tag $1
 git push origin master
 
 git checkout develop
